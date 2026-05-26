@@ -59,7 +59,7 @@ function createWindow() {
 
   mainWindow.loadURL(`http://localhost:${PORT}`);
 
-  // Menu.setApplicationMenu(null); // Ẩn Menu mặc định nếu muốn
+  Menu.setApplicationMenu(null); // Ẩn Menu mặc định
 
   mainWindow.on('closed', () => {
     mainWindow = null;
