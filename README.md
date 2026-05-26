@@ -7,7 +7,7 @@
 ## 📥 Hướng Dẫn Tải Về & Cài Đặt (Cho Người Dùng)
 
 Bạn có thể tải phiên bản mới nhất của ứng dụng tại mục **Releases** của dự án:
-👉 **[Tải ứng dụng tại đây (GitHub Releases)](https://github.com/MinQuan-kun/QuanLyTienDo-Desktop/releases)** *(Hãy thay link này bằng link Repo thật sau khi tạo)*
+👉 **[Tải ứng dụng tại đây (GitHub Releases)](https://github.com/MinQuan-kun/QuanLyTienDo-Desktop/releases)**
 
 Tại trang tải về, bạn chọn một trong hai phiên bản dưới phần **Assets**:
 
