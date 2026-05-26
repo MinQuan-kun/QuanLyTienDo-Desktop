@@ -7,7 +7,7 @@
 ## 📥 Hướng Dẫn Tải Về & Cài Đặt (Cho Người Dùng)
 
 Bạn có thể tải phiên bản mới nhất của ứng dụng tại mục **Releases** của dự án:
-👉 **[Tải ứng dụng tại đây (GitHub Releases)](https://github.com/MinQuan-kun/QuanLyTienDo-Desktop/releases)** *(Hãy thay link này bằng link Repo thật sau khi tạo)*
+👉 **[Tải ứng dụng tại đây (GitHub Releases)](https://github.com/MinQuan-kun/QuanLyTienDo-Desktop/releases)**
 
 Tại trang tải về, bạn chọn một trong hai phiên bản dưới phần **Assets**:
 
@@ -20,28 +20,3 @@ Tại trang tải về, bạn chọn một trong hai phiên bản dưới phần
 *Lưu ý: Máy tính cần có kết nối mạng Internet khi sử dụng ứng dụng.*
 
 ---
-
-## 💻 Hướng Dẫn Dành Cho Lập Trình Viên
-
-Nếu bạn muốn thay đổi mã nguồn hoặc đóng gói lại ứng dụng:
-
-### 1. Chuẩn Bị
-Đảm bảo đã sao chép 2 tệp tin sau từ dự án chính và đặt vào thư mục `desktop-app/`:
-*   `start_app.exe` (File thực thi backend đã build).
-*   `.env` (Tệp chứa chuỗi kết nối cơ sở dữ liệu MongoDB Atlas).
-
-### 2. Chạy Thử (Chế độ Dev)
-```bash
-# Cài đặt thư viện
-npm install
-
-# Khởi chạy Electron
-npm start
-```
-Hoặc nhấp đúp chạy trực tiếp file **`start_desktop.bat`**.
-
-### 3. Đóng Gói Lại Thành File `.exe`
-```bash
-npm run dist
-```
-Hoặc nhấp đúp chạy trực tiếp file **`build_desktop.bat`**. File cài đặt mới sẽ nằm trong thư mục `dist/`.
