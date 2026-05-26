@@ -1,0 +1,4 @@
+node_modules/
+dist/
+start_app.exe
+.env

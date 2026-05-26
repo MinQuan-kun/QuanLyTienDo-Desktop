@@ -1,0 +1,35 @@
+{
+  "name": "theodoitiendo-desktop",
+  "version": "1.0.0",
+  "description": "Ứng dụng theo dõi tiến độ công việc trên máy tính",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.theodoitiendo.desktop",
+    "productName": "TheoDoiTienDo",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "start_app.exe",
+      ".env"
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    }
+  }
+}
