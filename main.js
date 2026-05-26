@@ -51,6 +51,7 @@ function createWindow() {
     width: 1366,
     height: 768,
     title: "Hệ Thống Theo Dõi Tiến Độ Công Việc",
+    icon: path.join(__dirname, 'build', 'icon.png'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true
