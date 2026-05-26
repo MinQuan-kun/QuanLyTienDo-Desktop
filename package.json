@@ -22,8 +22,17 @@
     "files": [
       "main.js",
       "package.json",
-      "start_app.exe",
-      ".env"
+      "build/icon.png"
+    ],
+    "extraResources": [
+      {
+        "from": "start_app.exe",
+        "to": "start_app.exe"
+      },
+      {
+        "from": ".env",
+        "to": ".env"
+      }
     ],
     "win": {
       "icon": "build/icon.png",
