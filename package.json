@@ -1,6 +1,6 @@
 {
   "name": "theodoitiendo-desktop",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Ứng dụng theo dõi tiến độ công việc trên máy tính",
   "main": "main.js",
   "scripts": {
