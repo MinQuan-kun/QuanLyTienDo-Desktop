@@ -77,9 +77,34 @@ function createWindow() {
 
   mainWindow.loadURL(`http://localhost:${PORT}`);
 
-  Menu.setApplicationMenu(null); // Ẩn Menu mặc định
+  Menu.setApplicationMenu(null);
 
-  // Cho phép bấm F12 để bật/tắt công cụ nhà phát triển phục vụ debug lỗi
+  mainWindow.webContents.on('did-create-window', (childWindow) => {
+    childWindow.setMenu(null);
+    
+    const targetTitle = "Xem Chi Tiết Tài Liệu - Hệ Thống Quản Lý Tiến Độ";
+
+    childWindow.on('page-title-updated', (event) => {
+      event.preventDefault();
+      childWindow.setTitle(targetTitle);
+    });
+
+    childWindow.webContents.on('page-title-updated', (event) => {
+      event.preventDefault();
+      childWindow.setTitle(targetTitle);
+    });
+
+    childWindow.webContents.on('did-finish-load', () => {
+      childWindow.setTitle(targetTitle);
+    });
+
+    childWindow.webContents.on('dom-ready', () => {
+      childWindow.setTitle(targetTitle);
+    });
+
+    childWindow.setTitle(targetTitle);
+  });
+
   mainWindow.webContents.on('before-input-event', (event, input) => {
     if (input.key === 'F12' && input.type === 'keyDown') {
       mainWindow.webContents.toggleDevTools();
@@ -96,7 +121,6 @@ function createWindow() {
   });
 }
 
-// Chạy ứng dụng
 app.on('ready', () => {
   startBackend();
   checkServerReady(() => {
@@ -104,7 +128,6 @@ app.on('ready', () => {
   });
 });
 
-// Tắt backend khi đóng app để tránh bị lỗi treo cổng 5001 lần chạy sau
 app.on('window-all-closed', () => {
   if (backendProcess) {
     backendProcess.kill();
