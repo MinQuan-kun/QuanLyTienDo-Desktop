@@ -1,6 +1,6 @@
 {
   "name": "theodoitiendo-desktop",
-  "version": "1.1.2",
+  "version": "1.3.0",
   "description": "Ứng dụng theo dõi tiến độ công việc trên máy tính",
   "main": "main.js",
   "scripts": {
@@ -47,7 +47,8 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": "always",
       "createStartMenuShortcut": true,
-      "shortcutName": "TheoDoiTienDo"
+      "shortcutName": "TheoDoiTienDo",
+      "include": "build/installer.nsh"
     }
   }
 }
